@@ -60,6 +60,7 @@ namespace Dotfire
             colorcountbig = null;
             count = count.OrderBy(x => x.Value).ToDictionary(p => p.Key, p => p.Value);
             int deep = (int)(count.Count* deeppercent);// (int)(count.Last().Value * deeppercent);
+            deep=deep<1 ? 1 : deep;
             uint[] corlortofind = count.OrderBy(x => x.Value).Take(deep).Select(x => x.Key).ToArray();
 
             count = null;
@@ -102,7 +103,7 @@ namespace Dotfire
                             AllDot++;
                             Color vsmal = Smallpic.GetPixel(i, j);
                             Color vsource = Source.GetPixel(i + startX, j + startY);
-                            if (ColorSimilarity(vsmal, vsource) < error)
+                            if (ColorSimilarity(vsmal, vsource) <= error)
                             {
                                 BeFind++;
                             }
@@ -126,7 +127,7 @@ namespace Dotfire
         /// <param name="a">颜色a</param>
         /// <param name="b">颜色b</param>
         /// <returns>两颜色的RGB值的差平均值</returns>
-        private static byte ColorSimilarity(Color a, Color b)
+        private static byte ColorSimilarity2(Color a, Color b)
         {
             //int Ea = (a.A - b.A);
             byte Er = (byte)Math.Abs(a.R - b.R);
@@ -134,6 +135,18 @@ namespace Dotfire
             byte Eb = (byte)Math.Abs(a.B - b.B);
             byte e = (byte)((Er + Eg + Eb) / 3);
             return e;
+        }
+        private static byte ColorSimilarity(Color a, Color b)
+        {
+            const double Max= 2167.470702927d;
+            //int Ea = (a.A - b.A);
+            long Er = a.R - b.R;
+            long Eg = a.G - b.G;
+            long Eb = a.B - b.B;
+            long DR = (a.R + b.R)/2;
+            double e = Math.Sqrt((((512+DR)*Er*Er)>>8)+4*Eg*Eg+(((767-DR)*Eb*Eb)>>8));
+            byte ret = (byte)(e/Max*255);
+            return ret;
         }
 
         /// <summary>

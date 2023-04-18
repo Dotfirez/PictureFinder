@@ -60,7 +60,8 @@ namespace PictureFindTest
             }
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            bool befind = PictureFinder.FindSmallPic(out Dictionary<Point, float> Found, big, small, 0.8f);
+            //bool befind = PictureFinder.FindSmallPic(out Dictionary<Point, float> Found, big, small, out Dictionary<Point, float> oFound, false,0.6f,new uint[] {0xFF},0,1,0.1f);
+            bool befind = PictureFinder.FindSmallPic(out Dictionary<Point, float> Found, big, small, 0.9f);
             stopwatch.Stop();
             label2.Text = $"{stopwatch.ElapsedMilliseconds}毫秒";
 
