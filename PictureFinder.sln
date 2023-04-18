@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureFinder", "PictureFinder.csproj", "{47EAD9BA-04EB-43E8-9F59-7E0439A1346A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureFindTest", "PictureFindTest\PictureFindTest.csproj", "{DE6FC1C3-A206-42A1-B102-678CDAAA192C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47EAD9BA-04EB-43E8-9F59-7E0439A1346A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47EAD9BA-04EB-43E8-9F59-7E0439A1346A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47EAD9BA-04EB-43E8-9F59-7E0439A1346A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47EAD9BA-04EB-43E8-9F59-7E0439A1346A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE6FC1C3-A206-42A1-B102-678CDAAA192C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE6FC1C3-A206-42A1-B102-678CDAAA192C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE6FC1C3-A206-42A1-B102-678CDAAA192C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE6FC1C3-A206-42A1-B102-678CDAAA192C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAE4CB1D-0FAE-49F2-839F-1288CCE1205D}
+	EndGlobalSection
+EndGlobal
