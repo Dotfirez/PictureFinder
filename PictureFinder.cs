@@ -53,7 +53,7 @@ namespace Dotfire
             {
                 FindResulte = null;
                 OriginalFindResulte = null;
-                GC.Collect();
+                //GC.Collect();
                 return false;
             }
             colorcountsmall = null;
